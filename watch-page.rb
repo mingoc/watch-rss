@@ -27,6 +27,8 @@ Mail.defaults do
   delivery_method :smtp, mail_options
 end
 
+Dir.chdir(File.dirname(__FILE__))
+#puts Dir.pwd
 
 def submit_login(agent)
     agent.get($login_url) do |page|
