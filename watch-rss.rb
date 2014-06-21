@@ -3,6 +3,9 @@
 require 'rss'
 require 'open-uri'
 require 'mail'
+require 'rubygems'
+require 'mechanize'
+
 
 mail_options = { :address         => "smtp.gmail.com",
             :port                 => 587,
