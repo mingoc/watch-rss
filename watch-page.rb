@@ -19,7 +19,7 @@ mail_options = { :address         => "smtp.webfaction.com",
             :port                 => 587,
             :domain               => 'HiPDA',
             :user_name            => 'sumeiq',
-            :password             => 'jzss1783',
+            :password             => '*******',
             :authentication       => 'plain',
             :enable_starttls_auto => true  }
 
@@ -37,7 +37,7 @@ puts Dir.pwd, record_file
 def submit_login(agent)
     agent.get($login_url) do |page|
       page.forms[0]["username"] = "cxmtime"
-      page.forms[0]["password"] = "jzss1783" 
+      page.forms[0]["password"] = "******" 
       page.forms[0].submit
     end
     puts "login done. save cookie."
