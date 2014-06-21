@@ -4,7 +4,7 @@ require 'rubygems'
 require 'mechanize'
 require 'mail'
 
-record_file="watch-record.txt"
+
 watch_keyword=["奶粉","德国","爱他美", "喜宝","三星" ]
 $login_url='http://www.hi-pda.com/forum/logging.php?action=login'
 
@@ -27,8 +27,12 @@ Mail.defaults do
   delivery_method :smtp, mail_options
 end
 
-Dir.chdir(File.dirname(__FILE__))
-#puts Dir.pwd
+dir=File.dirname(__FILE__)
+Dir.chdir(dir)
+record_file="#{Dir.pwd}/watch-record.txt"
+puts Dir.pwd, record_file
+
+
 
 def submit_login(agent)
     agent.get($login_url) do |page|
