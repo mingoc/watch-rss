@@ -15,10 +15,10 @@ urls = ['http://www.hi-pda.com/forum/forumdisplay.php?fid=2',
 
 
 
-mail_options = { :address         => "smtp.gmail.com",
+mail_options = { :address         => "smtp.webfaction.com",
             :port                 => 587,
             :domain               => 'HiPDA',
-            :user_name            => 'wayle007',
+            :user_name            => 'sumeiq',
             :password             => 'jzss1783',
             :authentication       => 'plain',
             :enable_starttls_auto => true  }
@@ -67,7 +67,7 @@ urls.each() do |url|
              puts "Not in record history."
              Mail.deliver do
                to 'sumeiq@gmail.com'
-               from 'HIPDA'
+               from 'denila@hkgreentree.com'
                subject "HIPDA! #{text}"
                body "http://hi-pda.com/forum/#{link.href} "
              end
